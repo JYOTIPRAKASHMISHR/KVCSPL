@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Home.css";
 import { motion } from "framer-motion";
-import { useEffect,useState } from "react";
+import { useEffect,useState,useRef } from "react";
 import heroImg from "../assets/hero-team.jpg"; // rename your image file
 import Navbar from "../components/Navbar"; 
 import webIcon from "../assets/web.png";
@@ -341,6 +341,40 @@ const handleSubmit = async (e) => {
   };
 }, []);
 
+const videos = [
+  "/videos/video.mp4",
+  "/videos/techvideo.mp4",
+  "/videos/lastvideo.mp4"
+];
+
+
+  const videoRef = useRef(null);
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+  const video = videoRef.current;
+  if (!video) return;
+
+  video.src = videos[index];
+
+  const playPromise = video.play();
+  if (playPromise !== undefined) {
+    playPromise.catch((err) => {
+      console.log("Autoplay blocked:", err);
+    });
+  }
+
+  const handleEnd = () => {
+    setIndex((prev) => (prev + 1) % videos.length);
+  };
+
+  video.addEventListener("ended", handleEnd);
+
+  return () => {
+    video.removeEventListener("ended", handleEnd);
+  };
+}, [index]);
+
 
   return (
     <>
@@ -349,6 +383,7 @@ const handleSubmit = async (e) => {
   <LoginPopup onClose={() => setShowLoginPopup(false)} />
 )}
 
+    
     <section className="home-section">
       <div className="home-container">
 
@@ -373,13 +408,19 @@ const handleSubmit = async (e) => {
           </div>
 
           <div className="hero-stats">
-            ⭐ 5-Star Rated &nbsp;&nbsp; | &nbsp;&nbsp; 🛡 ISO Certified &nbsp;&nbsp; | &nbsp;&nbsp; 👍 98% Client Satisfaction
+            ⭐ 5-Star Rated | 🛡 ISO Certified | 👍 98% Client Satisfaction
           </div>
         </div>
 
-        {/* RIGHT CONTENT */}
+        {/* RIGHT CONTENT (VIDEO) */}
         <div className="home-right">
-          <img src={heroImg} alt="team working" className="hero-img" />
+          <video
+            ref={videoRef}
+            className="hero-video"
+            autoPlay
+            muted
+            playsInline
+          />
         </div>
 
       </div>
