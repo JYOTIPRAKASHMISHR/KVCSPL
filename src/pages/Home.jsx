@@ -532,77 +532,75 @@ const videos = [
     </section>
 
 
-      <section id="pricing" className="pricing-section">
+      {/* 
+<section id="pricing" className="pricing-section">
 
-      <div className="pricing-header fade-down">
-        <h1>Flexible Pricing Plans</h1>
-        <p>Choose the perfect plan for your project needs and budget requirements</p>
-      </div>
+  <div className="pricing-header fade-down">
+    <h1>Flexible Pricing Plans</h1>
+    <p>Choose the perfect plan for your project needs and budget requirements</p>
+  </div>
 
-      <div className="pricing-container">
+  <div className="pricing-container">
 
-        {/* Basic */}
-        <div className="pricing-card fade-up delay-1">
-          <h3>Basic</h3>
-          <h2><span>$5,000</span> <small>/project</small></h2>
-          <p className="desc">Perfect for startups and small businesses</p>
-          <ul>
-            <li>Custom Web Application</li>
-            <li>Responsive Design</li>
-            <li>Basic SEO Optimization</li>
-            <li>Contact Form Integration</li>
-            <li>3 Months Support</li>
-            <li>Source Code Delivery</li>
-            <li>Basic Documentation</li>
-            <li>Email Support</li>
-          </ul>
-          <button className="btn-outline">Get Proposal</button>
-        </div>
+    <div className="pricing-card fade-up delay-1">
+      <h3>Basic</h3>
+      <h2><span>$5,000</span> <small>/project</small></h2>
+      <p className="desc">Perfect for startups and small businesses</p>
+      <ul>
+        <li>Custom Web Application</li>
+        <li>Responsive Design</li>
+        <li>Basic SEO Optimization</li>
+        <li>Contact Form Integration</li>
+        <li>3 Months Support</li>
+        <li>Source Code Delivery</li>
+        <li>Basic Documentation</li>
+        <li>Email Support</li>
+      </ul>
+      <button className="btn-outline">Get Proposal</button>
+    </div>
 
-        {/* Standard */}
-        <div className="pricing-card popular fade-up delay-2">
-          <div className="badge">Most Popular</div>
-          <h3>Standard</h3>
-          <h2><span>$15,000</span> <small>/project</small></h2>
-          <p className="desc">Ideal for growing businesses</p>
-          <ul>
-            <li>Everything in Basic</li>
-            <li>Mobile App Development</li>
-            <li>API Development</li>
-            <li>Database Integration</li>
-            <li>Payment Gateway</li>
-            <li>6 Months Support</li>
-            <li>Advanced Analytics</li>
-            <li>Priority Support</li>
-            <li>Performance Optimization</li>
-            <li>Security Audit</li>
-          </ul>
-          <button className="btn-primary">Get Proposal</button>
-        </div>
+    <div className="pricing-card popular fade-up delay-2">
+      <div className="badge">Most Popular</div>
+      <h3>Standard</h3>
+      <h2><span>$15,000</span> <small>/project</small></h2>
+      <p className="desc">Ideal for growing businesses</p>
+      <ul>
+        <li>Everything in Basic</li>
+        <li>Mobile App Development</li>
+        <li>API Development</li>
+        <li>Database Integration</li>
+        <li>Payment Gateway</li>
+        <li>6 Months Support</li>
+        <li>Advanced Analytics</li>
+        <li>Priority Support</li>
+        <li>Performance Optimization</li>
+        <li>Security Audit</li>
+      </ul>
+      <button className="btn-primary">Get Proposal</button>
+    </div>
 
-        {/* Enterprise */}
-        <div className="pricing-card fade-up delay-3">
-          <h3>Enterprise</h3>
-          <h2><span>Custom</span> <small>/quote</small></h2>
-          <p className="desc">For large organizations</p>
-          <ul>
-            <li>Everything in Standard</li>
-            <li>Custom Architecture</li>
-            <li>Microservices Design</li>
-            <li>Cloud Infrastructure</li>
-            <li>DevOps Setup</li>
-            <li>12 Months Support</li>
-            <li>Dedicated Team</li>
-            <li>24/7 Support</li>
-            <li>Training & Consultation</li>
-            <li>Scalability Planning</li>
-          </ul>
-          <button className="btn-outline">Get Proposal</button>
-        </div>
+    <div className="pricing-card fade-up delay-3">
+      <h3>Enterprise</h3>
+      <h2><span>Custom</span> <small>/quote</small></h2>
+      <p className="desc">For large organizations</p>
+      <ul>
+        <li>Everything in Standard</li>
+        <li>Custom Architecture</li>
+        <li>Microservices Design</li>
+        <li>Cloud Infrastructure</li>
+        <li>DevOps Setup</li>
+        <li>12 Months Support</li>
+        <li>Dedicated Team</li>
+        <li>24/7 Support</li>
+        <li>Training & Consultation</li>
+        <li>Scalability Planning</li>
+      </ul>
+      <button className="btn-outline">Get Proposal</button>
+    </div>
 
-      </div>
-    </section>
-
+  </div>
+</section>
+*/}
 
 
      <section className="testimonial-section">
