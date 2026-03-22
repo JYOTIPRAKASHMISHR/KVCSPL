@@ -408,7 +408,7 @@ const videos = [
           </div>
 
           <div className="hero-stats">
-            ⭐ 5-Star Rated | 🛡 ISO Certified | 👍 98% Client Satisfaction
+            ⭐ 5-Star Rated | 👍 98% Client Satisfaction
           </div>
         </div>
 
@@ -512,7 +512,7 @@ const videos = [
 
             <div className="stat-item">
               <BadgeCheck size={18} className="icon green" />
-              <span>ISO Certified</span>
+              
             </div>
           </div>
         </div>
@@ -764,33 +764,36 @@ const videos = [
 
 
 <section className="faq-section">
-  <h2>Frequently Asked Questions</h2>
-  <p>
-    Find answers to common questions about our software development services and process
-  </p>
+  <div className="faq-header">
+    <h2>Frequently Asked Questions</h2>
+    <p>
+      Everything you need to know about our services and process
+    </p>
+  </div>
 
   <div className="faq-container">
     {faqs.map((faq, index) => (
       <div
         key={index}
         className={`faq-item ${activeIndex === index ? "active" : ""}`}
-        onClick={() => toggleFAQ(index)}
       >
-        <div className="faq-question">
-          {faq.question}
-          <span className="faq-arrow">
-            {activeIndex === index ? "▲" : "▼"}
+        <div
+          className="faq-question"
+          onClick={() => toggleFAQ(index)}
+        >
+          <h4>{faq.question}</h4>
+          <span className="faq-icon">
+            {activeIndex === index ? "−" : "+"}
           </span>
         </div>
 
         <div className="faq-answer">
-          {faq.answer}
+          <p>{faq.answer}</p>
         </div>
       </div>
     ))}
   </div>
 </section>
-
 
 
 <Footer/>
