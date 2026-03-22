@@ -160,7 +160,7 @@ const Register = () => {
         {/* LEFT */}
         <div className="register-left">
           <img src={logo} alt="Logo" />
-          <h1>VIVASVAN CONSULTANT</h1>
+          <h1>KUMUDVASAN CONSULTANCY & SERVICES PVT LTD</h1>
           <p>
             Create your account to start working with our team and manage your
             projects efficiently.

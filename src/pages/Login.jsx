@@ -200,7 +200,7 @@ const Login = () => {
         {/* LEFT */}
         <div className="login-left">
           <img src={logo} alt="Logo" />
-          <h1>VIVASVAN CONSULTANT</h1>
+          <h1>KUMUDVASAN CONSULTANCY & SERVICES PVT LTD</h1>
           <p>
             Securely login to manage your projects, track progress, and
             collaborate with our expert team.

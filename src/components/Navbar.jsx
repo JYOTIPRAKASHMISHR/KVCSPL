@@ -29,7 +29,7 @@ function Navbar() {
                         <li><a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a></li>
                         <li><a href="#technologie" onClick={() => setIsMenuOpen(false)}>Technologies</a></li>
                         <li><a href="#" onClick={() => setIsMenuOpen(false)}>Portfolio</a></li>
-                        <li><a href="#pricing" onClick={() => setIsMenuOpen(false)}>Pricing</a></li>
+                        {/* <li><a href="#pricing" onClick={() => setIsMenuOpen(false)}>Pricing</a></li> */}
                         <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About Us</a></li>
                     </ul>
                     <button className="nav-btn" onClick={scrollToProject}>

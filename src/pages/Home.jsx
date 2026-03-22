@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import LoginPopup from "../components/LoginPopup";
 
 import uiuxIcon from "../assets/uiux.png";
+import icon09 from "../assets/icon09.png";
 import img3 from "../assets/img3.png";
 import Training from "../assets/talent.png";
 import HR1 from "../assets/hr1.png";
@@ -42,7 +43,26 @@ import { ref, push, set, serverTimestamp } from "firebase/database";
 import { database } from "../firebase";
 
 
-
+const testimonials = [
+  {
+    text: "TechSolutions Pro helped us scale our backend across multiple regions with zero downtime. Their DevOps team is incredible.",
+    name: "Aarav Sharma",
+    role: "CTO, DelhiTech Solutions (Delhi)",
+    img: "https://i.pravatar.cc/80?img=12"
+  },
+  {
+    text: "We improved our product performance by 60% after working with them. Their engineering quality is top-notch.",
+    name: "Riya Mehta",
+    role: "Product Manager, FinEdge (Mumbai)",
+    img: "https://i.pravatar.cc/80?img=32"
+  },
+  {
+    text: "Their cloud and AI integration helped us automate our business workflows. Highly recommended team.",
+    name: "Anjali Nair",
+    role: "Founder, KeralaSoft Labs (Kerala)",
+    img: "https://i.pravatar.cc/80?img=45"
+  }
+];
 
 const faqs = [
   {
@@ -175,7 +195,7 @@ const services = [
     desc: "Accurate monthly payroll processing including PF, ESI, Professional Tax, and TDS management with timely statutory filings.",
   },
   {
-    //icon: <UserPlus size={40} />, // You can use a 'users' or 'search' icon
+    icon: icon09, 
     title: "Talent Acquisition",
     desc: "End-to-end recruitment solutions from campus hiring to executive search, including skill-based screening and onboarding.",
   },
@@ -374,6 +394,18 @@ const videos = [
     video.removeEventListener("ended", handleEnd);
   };
 }, [index]);
+
+const [current, setCurrent] = useState(0);
+
+const nextSlide = () => {
+  setCurrent((prev) => (prev + 1) % testimonials.length);
+};
+
+const prevSlide = () => {
+  setCurrent((prev) =>
+    prev === 0 ? testimonials.length - 1 : prev - 1
+  );
+};
 
 
   return (
@@ -603,39 +635,48 @@ const videos = [
 */}
 
 
-     <section className="testimonial-section">
-      <div className="testimonial-header fade-down">
-        <h2>What Our Clients Say</h2>
-        <div className="rating">
-          ★★★★★ <span>4.9/5 based on 200+ reviews</span>
-        </div>
+   <section className="testimonial-section">
+  <div className="testimonial-header fade-down">
+    <h2>What Our Clients Say</h2>
+    <div className="rating">
+      ★★★★★ <span>4.9/5 based on 200+ reviews</span>
+    </div>
+  </div>
+
+  <div className="testimonial-card fade-up delay-2">
+    
+    {/* LEFT */}
+    <span className="arrow left" onClick={prevSlide}>‹</span>
+
+    <div className="stars">★★★★★</div>
+
+    <p className="testimonial-text">
+      “{testimonials[current].text}”
+    </p>
+
+    <div className="author">
+      <img src={testimonials[current].img} alt="user" />
+      <div>
+        <h4>{testimonials[current].name}</h4>
+        <small>{testimonials[current].role}</small>
       </div>
+    </div>
 
-      <div className="testimonial-card fade-up delay-2">
-        <span className="arrow left">‹</span>
+    {/* RIGHT */}
+    <span className="arrow right" onClick={nextSlide}>›</span>
+  </div>
 
-        <div className="stars">★★★★★</div>
-
-        <p className="testimonial-text">
-          “TechSolutions Pro's cloud architecture and DevOps expertise helped us scale our platform to handle millions of users. Their technical knowledge and problem-solving skills are top-notch.”
-        </p>
-
-        <div className="author">
-          <img src="https://i.pravatar.cc/80" alt="user" />
-          <div>
-            <h4>David Park</h4>
-            <small>VP Engineering, DataFlow</small>
-          </div>
-        </div>
-
-        <span className="arrow right">›</span>
-      </div>
-
-      <div className="dots">
-        <span></span><span></span><span className="active"></span>
-      </div>
-    </section>
-
+  {/* DOTS */}
+  <div className="dots">
+    {testimonials.map((_, index) => (
+      <span
+        key={index}
+        className={current === index ? "active" : ""}
+        onClick={() => setCurrent(index)}
+      ></span>
+    ))}
+  </div>
+</section>
 
      <section id="requestproject" className="pc-section">
   {/* LEFT CONTENT */}
