@@ -317,8 +317,8 @@ const handleSubmit = async (e) => {
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
-  useEffect(() => {
+if(typeof window !== "undefined"){
+   useEffect(() => {
     const lenis = new Lenis({
       duration: 2.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -338,6 +338,9 @@ const handleSubmit = async (e) => {
     };
   }, []);
 
+}
+
+ 
 
  useEffect(() => {
   let popupInterval;
@@ -406,6 +409,11 @@ const prevSlide = () => {
     prev === 0 ? testimonials.length - 1 : prev - 1
   );
 };
+const [isMenuOpen, setIsMenuOpen] = useState(false);
+const scrollToProject = () => {
+        document.getElementById("requestproject")?.scrollIntoView({ behavior: "smooth" });
+        setIsMenuOpen(false);
+    };
 
 
   return (
@@ -435,7 +443,7 @@ const prevSlide = () => {
           </p>
 
           <div className="hero-buttons">
-            <button className="btn primary">🚀 Start Your Project</button>
+            <button className="btn primary" onClick={scrollToProject} >🚀 Start Your Project</button>
             <button className="btn secondary">📅 Book Free Consultation</button>
           </div>
 
