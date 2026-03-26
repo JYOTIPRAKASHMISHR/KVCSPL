@@ -348,9 +348,13 @@ if(typeof window !== "undefined"){
   const unsubscribe = onAuthStateChanged(auth, (user) => {
     if (!user) {
       // User NOT logged in → show popup every 10 sec
-      popupInterval = setInterval(() => {
-        setShowLoginPopup(true);
-      }, 10000);
+      // popupInterval = setInterval(() => {
+      //   setShowLoginPopup(true);
+      // }, 10000);
+      if (!localStorage.getItem("loginPopupShown")) {
+  setShowLoginPopup(true);
+  localStorage.setItem("loginPopupShown", "true");
+}
     } else {
       // User logged in → never show popup
       setShowLoginPopup(false);
@@ -367,7 +371,7 @@ if(typeof window !== "undefined"){
 const videos = [
   "/videos/video.mp4",
   "/videos/techvideo.mp4",
-  "/videos/lastvideo.mp4"
+  "/videos/llastvideo.mp4"
 ];
 
 
@@ -429,7 +433,7 @@ const scrollToProject = () => {
 
         {/* LEFT CONTENT */}
         <div className="home-left">
-          <p className="trust-badge">🔰 Trusted by 200+ Companies Worldwide</p>
+          <p className="trust-badge">🔰 Trusted by 100+ Companies Worldwide</p>
 
           <h1 className="hero-title">
             Build Custom <br />
@@ -444,7 +448,7 @@ const scrollToProject = () => {
 
           <div className="hero-buttons">
             <button className="btn primary" onClick={scrollToProject} >🚀 Start Your Project</button>
-            <button className="btn secondary">📅 Book Free Consultation</button>
+            <button className="btn secondary">📅 Book Consultation</button>
           </div>
 
           <div className="hero-stats">
