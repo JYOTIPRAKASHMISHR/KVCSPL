@@ -15,6 +15,10 @@
 .nav-links li a { color: #fff; text-decoration: none; font-size: 15px; font-weight: 500; transition: 0.3s; position: relative; }
 .nav-links li a:hover { color: #6cb8ff; }
 
+.nav-actions{display:flex;align-items:center;gap:12px;}
+.nav-login{background:transparent;border:1px solid rgba(255,255,255,0.6);color:#fff;padding:8px 18px;border-radius:25px;font-size:14px;font-weight:600;cursor:pointer;transition:all .3s ease;}
+.nav-login:hover{background:#fff;color:#4975ba;transform:translateY(-2px);}
+
 /* Call to Action Button */
 .nav-btn { background: #ffffff; border: none; padding: 10px 22px; font-size: 14px; color: #4975ba; border-radius: 30px; cursor: pointer; font-weight: 700; transition: 0.3s ease; white-space: nowrap; }
 .nav-btn:hover { background: #e6f2ff; transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
@@ -26,3 +30,8 @@
 /* Responsive Media Queries */
 @media (max-width: 1100px) { .nav-links { gap: 12px; } .company-name { font-size: 1rem; } .nav-btn { padding: 8px 15px; } }
 @media (max-width: 900px) { .mobile-toggle { display: flex; } .nav-menu { position: absolute; top: 100%; left: 0; width: 100%; background: #3a63a3; flex-direction: column; padding: 20px 0; gap: 20px; display: none; } .nav-menu.active { display: flex; } .nav-links { flex-direction: column; align-items: center; gap: 15px; } .company-tagline { display: none; } }
+
+@media (max-width:900px){
+.nav-actions{flex-direction:column;gap:10px;}
+.nav-login,.nav-btn{width:80%;text-align:center;}
+}

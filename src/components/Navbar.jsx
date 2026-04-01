@@ -24,19 +24,24 @@ function Navbar() {
 
                 {/* Navigation Links */}
                 <div className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
-                    <ul className="nav-links">
-                        <li><a href="#" onClick={() => setIsMenuOpen(false)}>Home</a></li>
-                        <li><a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a></li>
-                        <li><a href="#technologie" onClick={() => setIsMenuOpen(false)}>Technologies</a></li>
-                        <li><a href="#" onClick={() => setIsMenuOpen(false)}>Portfolio</a></li>
-                        {/* <li><a href="#pricing" onClick={() => setIsMenuOpen(false)}>Pricing</a></li> */}
-                        <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About Us</a></li>
-                    </ul>
-                    <button className="nav-btn" onClick={scrollToProject}>
-                        Request a Project
-                    </button>
-                </div>
+  <ul className="nav-links">
+    <li><a href="#" onClick={() => setIsMenuOpen(false)}>Home</a></li>
+    <li><a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a></li>
+    <li><a href="#technologie" onClick={() => setIsMenuOpen(false)}>Technologies</a></li>
+    <li><a href="#" onClick={() => setIsMenuOpen(false)}>Portfolio</a></li>
+    <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About Us</a></li>
+  </ul>
 
+  <div className="nav-actions">
+    <button className="nav-login" onClick={() => window.location.href="/login"}>
+      Login
+    </button>
+
+    <button className="nav-btn" onClick={scrollToProject}>
+      Request a Project
+    </button>
+  </div>
+</div>
                 {/* Mobile Toggle (Hamburger) */}
                 <div className="mobile-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                     <span></span>

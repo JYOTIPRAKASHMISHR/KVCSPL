@@ -433,7 +433,7 @@ const scrollToProject = () => {
 
         {/* LEFT CONTENT */}
         <div className="home-left">
-          <p className="trust-badge">🔰 Trusted by 100+ Companies Worldwide</p>
+          <p className="trust-badge">🔰 Trusted by 200+ Companies Worldwide</p>
 
           <h1 className="hero-title">
             Build Custom <br />
