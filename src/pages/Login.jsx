@@ -6,7 +6,7 @@ import googleLogo from "../assets/google.png";
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider, database } from "../firebase";
 import { ref, set } from "firebase/database";
-import "../styles/Login.css";
+import "../styles/login.css";
 
 const Login = () => {
   const navigate = useNavigate();
