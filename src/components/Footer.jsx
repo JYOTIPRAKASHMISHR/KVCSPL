@@ -21,7 +21,7 @@ const Footer = () => {
           </p>
 
           <div className="footer-contact">
-            <span><MapPin size={16}/> Noida , GaurCity2, Gauttam Budha Nagar, U.P 201009</span>
+            <span><MapPin size={16}/> Noida , GaurCity2, Gautam Buddha Nagar, U.P 201009</span>
             <span><Mail size={16}/> Satchidananda.panda@outlook.com</span>
           </div>
         </div>
